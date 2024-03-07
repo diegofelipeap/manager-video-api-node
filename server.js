@@ -1,18 +1,18 @@
-/* import { createServer } from 'node:http'
-
-const server = createServer((request, response) => {
-    response.write(`Server started ✅`)
-    return response.end()
-  
-})
-
-server.listen(3333) */
-
 import { fastify } from "fastify"
+import { dataBaseMemory } from "./database-memory.js"
 
 const server = fastify()
 
-server.get('/', () => {
+server.post('/videos', () => {
+    return `Server started ✅`
+})
+server.get('/videos', () => {
+    return `Server started ✅`
+})
+server.put('/videos', () => {
+    return `Server started ✅`
+})
+server.delete('/videos', () => {
     return `Server started ✅`
 })
 
