@@ -1,4 +1,4 @@
-import { createServer } from 'node:http'
+/* import { createServer } from 'node:http'
 
 const server = createServer((request, response) => {
     response.write(`Server started ✅`)
@@ -6,4 +6,16 @@ const server = createServer((request, response) => {
   
 })
 
-server.listen(3333)
+server.listen(3333) */
+
+import { fastify } from "fastify"
+
+const server = fastify()
+
+server.get('/', () => {
+    return `Server started ✅`
+})
+
+server.listen({
+    port: 3333,
+})
