@@ -3,7 +3,16 @@ export class dataBaseMemory {
     #videos = new Map()
 
     list() {
-        return this.#videos.values()
+        return Array.from(this.#videos.entries()).map((videosArray) => {
+            const id = videosArray[0]
+            const data = videosArray[1]
+
+            return {
+                id,
+                ...data
+            }
+
+        })
     }
 
     create(video) {
