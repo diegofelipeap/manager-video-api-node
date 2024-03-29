@@ -11,7 +11,6 @@ export class dataBaseMemory {
                 id,
                 ...data
             }
-
         })
     }
 
@@ -25,5 +24,4 @@ export class dataBaseMemory {
     delete(id) {
         this.#videos.delete(id)
     }
-
 }
