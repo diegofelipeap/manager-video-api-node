@@ -2,7 +2,7 @@ POST http://localhost:3333/videos
 Content-type: application/json
 
 {
-    "title": "video 01",
+    "title": "video node",
     "description":  "Este é um vídeo para testar o método POST.",
     "duration" : 180
 }
@@ -24,4 +24,4 @@ Content-type: application/json
 
 ###
 
-DELETE http://localhost:3333/videos/[any_id]
+DELETE http://localhost:3333/videos/bde2a566-1032-4927-b065-966b3adccfbf
